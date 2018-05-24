@@ -10,7 +10,6 @@ resource "aws_route_table" "public_route_table" {
 
 #Create Route Table Associations for each of the Private an Public Subnets
 resource "aws_route_table_association" "public_route_table_association" {
-  subnet_id = "${var.nano_subnet_id}"
+  subnet_id      = "${var.nano_subnet_id}"
   route_table_id = "${aws_route_table.public_route_table.id}"
 }
-

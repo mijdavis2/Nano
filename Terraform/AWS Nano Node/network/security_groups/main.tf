@@ -2,7 +2,7 @@
 resource "aws_security_group" "nano_sg" {
   name        = "nano_sg"
   description = "Nano Security Group"
-  vpc_id = "${var.nano_vpc_id}"
+  vpc_id      = "${var.nano_vpc_id}"
 
   # HTTP access from anywhere
   ingress {
@@ -13,7 +13,7 @@ resource "aws_security_group" "nano_sg" {
   }
 
   # SSH access from anywhere
-    ingress {
+  ingress {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
